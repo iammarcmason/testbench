@@ -14,9 +14,9 @@
       <v-app-side-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-side-icon>
       <v-spacer class="hidden-md-and-up"></v-spacer>
       <v-toolbar-title>{{appTitle}}</v-toolbar-title>
-      <v-btn flat class="hidden-sm-and-down">Menu</v-btn>
+      <v-btn text class="hidden-sm-and-down">Menu</v-btn>
       <v-spacer class="hidden-sm-and-down"></v-spacer>
-      <v-btn flat class="hidden-sm-and-down">SIGN IN</v-btn>
+      <v-btn text class="hidden-sm-and-down">SIGN IN</v-btn>
       <v-btn color="brown lighten-3" class="hidden-sm-and-down">JOIN</v-btn>
     </v-app-bar>
   </span>
