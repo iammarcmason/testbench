@@ -1,23 +1,28 @@
 <template>
   <span>
-    <v-navigation-drawer app v-model="drawer" class="brown lighten-2" dark disable-resize-watcher>
+    <v-navigation-drawer app v-model="drawer" class="grey darken-4" dark disable-resize-watcher>
       <v-list>
         <template v-for="(item, index) in items">
-          <v-list-item :key="index">
+          <v-list-item :key="index" :to="item.link">
             <v-list-item-content>{{item.title}}</v-list-item-content>
           </v-list-item>
           <v-divider :key="`divider-${index}`"></v-divider>
         </template>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app color="brown darken-4" dark>
+    <v-app-bar app color="grey darken-4" dark>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-spacer class="hidden-md-and-up"></v-spacer>
-      <v-toolbar-title>{{appTitle}}</v-toolbar-title>
-      <v-btn text class="hidden-sm-and-down">Menu</v-btn>
+      <router-link to="/">
+        <v-toolbar-title to="/">{{appTitle}}</v-toolbar-title>
+      </router-link>
+      <router-link to="/">
+        <v-btn text class="hidden-sm-and-down" to="/">Home</v-btn>
+      </router-link>
+      <v-btn text class="hidden-sm-and-down" to="/blog">Blog</v-btn>
       <v-spacer class="hidden-sm-and-down"></v-spacer>
-      <v-btn text class="hidden-sm-and-down">SIGN IN</v-btn>
-      <v-btn color="brown lighten-3" class="hidden-sm-and-down">JOIN</v-btn>
+      <v-btn text class="hidden-sm-and-down" to="/about">About</v-btn>
+      <v-btn text class="hidden-sm-and-down" to="/projects">Projects</v-btn>
     </v-app-bar>
   </span>
 </template>
@@ -27,13 +32,22 @@ export default {
   name: "AppNavigation",
   data() {
     return {
-      appTitle: "Meal Prep",
+      appTitle: "MdM Data Solutions",
       drawer: false,
-      items: [{ title: "Menu" }, { title: "Sign In" }, { title: "Join" }]
+      items: [
+        { title: "Home", link: "/" },
+        { title: "Blog", link: "/blog" },
+        { title: "About", link: "/about" },
+        { title: "Projects", link: "/projects" }
+      ]
     };
   }
 };
 </script>
-
 <style scoped>
+a {
+  color: white !important;
+  text-decoration: none;
+}
 </style>
+

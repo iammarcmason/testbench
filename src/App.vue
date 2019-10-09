@@ -15,9 +15,16 @@ export default {
   name: "App",
   components: {
     AppNavigation
+  },
+  mounted() {
+    //var className = "grey lighten-3";
+    document.body.classList.add("bg-dark");
   }
 };
 </script>
 
 <style>
+.bg-dark {
+  background-color: #303030;
+}
 </style>
