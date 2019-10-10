@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-lg>
+  <v-container grid-list-lg class="btm">
     <v-layout row>
       <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">Previous / Current Work</v-flex>
     </v-layout>
@@ -81,4 +81,7 @@ export default {
 </script>
 
 <style scoped>
+.btm {
+  padding-bottom: 56px;
+}
 </style>
