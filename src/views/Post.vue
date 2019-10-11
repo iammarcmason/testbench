@@ -8,41 +8,29 @@
         <p class="subheading mt-3">{{ post.description }}</p>
         <p class="subheading mt-3">{{ post.body }}</p>
       </v-flex>
-      <div id="disqus_thread"></div>
     </v-layout>
+    <div id="disqus_thread"></div>
+    <div class="comments">
+      <vue-disqus shortname="iam-testbed" :identifier="page_id" :url="pageURL"></vue-disqus>
+    </div>
   </v-container>
 </template>
  <script>
 export default {
   name: "blog",
   data() {
-    return { post: [] };
+    return {
+      post: [],
+      pageURL: "https://testbed.iammarcmason/post/" + this.$route.params.postID,
+      page_id: this.$route.params.postID
+    };
   },
   mounted() {
-    return this.$contentful
-      .getEntry(this.$route.params.postID)
-      .then(res => {
-        this.post = res.fields;
-      })
-      .catch(console.error);
-    //"https://testbed.iammarcmason/post/" + this.$route.params.postID;
+    return this.$contentful.getEntry(this.$route.params.postID).then(res => {
+      this.post = res.fields;
+    });
   }
 };
-
-var disqus_config = function() {
-  this.page.url =
-    "https://testbed.iammarcmason/post/" + this.$route.params.postID; // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = this.$route.params.postID; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() {
-  // DON'T EDIT BELOW THIS LINE
-  var d = document,
-    s = d.createElement("script");
-  s.src = "https://iam-testbed.disqus.com/embed.js";
-  s.setAttribute("data-timestamp", +new Date());
-  (d.head || d.body).appendChild(s);
-})();
 </script>
 
  <style scoped>
