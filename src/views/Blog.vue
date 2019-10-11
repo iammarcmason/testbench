@@ -4,7 +4,10 @@
       <h1>Blog Page</h1>
 
       <v-flex class="post" v-for="post in posts" v-bind:key="post.fields.slug">
-        <div class="headline mt-3">{{ post.fields.title }}</div>
+        <router-link :to="{ name: 'post', params: {postID: post.sys.id } }">
+          <div class="headline mt-3">{{ post.fields.title }}</div>
+        </router-link>
+        <p class="subheading mt-3">{{ post.fields.description }}</p>
         <p class="subheading mt-3">{{ post.fields.body }}</p>
       </v-flex>
     </v-layout>
@@ -34,5 +37,8 @@ export default {
 .post {
   margin-bottom: 50px;
   background: #555;
+}
+.post a {
+  color: white;
 }
 </style>
