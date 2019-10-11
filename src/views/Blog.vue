@@ -28,8 +28,7 @@ export default {
   mounted() {
     return this.$contentful
       .getEntries(query)
-      .then(res => (this.posts = res.items))
-      .catch(console.error);
+      .then(res => (this.posts = res.items));
   }
 };
 </script>

@@ -47,8 +47,7 @@ export default {
     return this.$contentful
       .getEntries(query)
       .then(res => (this.posts = res.items))
-      .then(res => (this.assets = res.includes))
-      .catch(console.error);
+      .then(res => (this.assets = res.includes));
   }
 };
 </script>
