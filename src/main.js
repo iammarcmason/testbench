@@ -6,9 +6,13 @@ import './registerServiceWorker';
 import vuetify from './plugins/vuetify';
 import ContentfulVue from 'contentful-vue';
 import VueDisqus from 'vue-disqus';
+import VueAnalytics from 'vue-analytics';
 
 Vue.use(VueDisqus);
-
+Vue.use(VueAnalytics, {
+  id: 'UA-149893925-1',
+  router,
+});
 Vue.config.productionTip = false;
 
 Vue.use(ContentfulVue, {
