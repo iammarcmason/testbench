@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .home-top {
-  background: url("https://i.ibb.co/0Zd0421/programming-code-minimalism-eat-wallpaper.jpg");
+  background: url("https://i.ibb.co/hL5bbd6/programming-code-minimalism-eat-wallpaper.jpg");
   background-size: cover;
   width: 100%;
   height: 100%;
