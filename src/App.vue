@@ -1,9 +1,10 @@
 <template>
   <v-app>
+    <appAlert />
     <app-navigation></app-navigation>
 
-    <v-content transition="slide-x-transition">
-      <router-view></router-view>
+    <v-content>
+      <router-view />
     </v-content>
     <bottom-nav></bottom-nav>
   </v-app>
@@ -12,12 +13,14 @@
 <script>
 import AppNavigation from "@/components/AppNavigation";
 import BottomNav from "@/components/BottomNav.vue";
+import AppAlert from "@/components/AppAlert.vue";
 
 export default {
   name: "App",
   components: {
     AppNavigation,
-    BottomNav
+    BottomNav,
+    AppAlert
   },
   mounted() {
     //var className = "grey lighten-3";

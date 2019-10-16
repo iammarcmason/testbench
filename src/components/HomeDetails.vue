@@ -1,11 +1,10 @@
 <template>
   <v-container>
     <v-layout column>
-      <v-flex class="display-2 text-xs-center my-5">Welcome to my Stuff</v-flex>
+      <!-- <v-flex class="display-2 text-xs-center my-5">Welcome to my Stuff</v-flex>-->
       <v-flex v-for="post in headers" v-bind:key="post.fields.slug">
         <div class="headline mt-3">{{ post.fields.header }}</div>
-
-        <p class="subheading mt-3">{{ post.fields.body}}</p>
+        <p class="body-2 mt-3">{{ post.fields.body}}</p>
       </v-flex>
     </v-layout>
   </v-container>

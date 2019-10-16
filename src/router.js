@@ -10,26 +10,31 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+      meta: { transitionName: 'slide' },
     },
     {
       path: '/about',
       name: 'about',
       component: () => import('./views/About.vue'),
+      meta: { transitionName: 'slide' },
     },
     {
       path: '/blog',
       name: 'blog',
       component: () => import('./views/Blog.vue'),
+      meta: { transitionName: 'slide' },
     },
     {
       path: '/projects',
       name: 'projects',
       component: () => import('./views/Projects.vue'),
+      meta: { transitionName: 'slide' },
     },
     {
       path: '/post/:postID',
       name: 'post',
       component: () => import('./views/Post.vue'),
+      meta: { transitionName: 'slide' },
     },
   ],
 });

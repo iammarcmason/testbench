@@ -4,7 +4,7 @@
       <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">Latest posts</v-flex>
     </v-layout>
     <v-layout row wrap>
-      <v-flex xs12 sm12 md4 v-for="post in posts" v-bind:key="post.fields.slug">
+      <v-flex xs12 sm12 md4 v-for="post in posts" v-bind:key="post.fields.slug" v-ripple>
         <router-link :to="{ name: 'post', params: {postID: post.sys.id } }">
           <v-card>
             <v-img :src="post.fields.heroImage.fields.file.url" height="500px">

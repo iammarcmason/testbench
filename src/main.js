@@ -9,6 +9,7 @@ import VueDisqus from 'vue-disqus';
 import VueAnalytics from 'vue-analytics';
 
 Vue.use(VueDisqus);
+
 Vue.use(VueAnalytics, {
   id: 'UA-149893925-1',
   router,

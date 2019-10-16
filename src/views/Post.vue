@@ -5,8 +5,10 @@
 
       <v-flex class="post">
         <div class="headline mt-3">{{ post.title }}</div>
-        <p class="subheading mt-3">{{ post.description }}</p>
-        <p class="subheading mt-3">{{ post.body }}</p>
+        <p class="mt-3 body-2">{{ post.description }}</p>
+        <v-divider></v-divider>
+
+        <div class="mt-3 body-2" v-html="post.body"></div>
       </v-flex>
     </v-layout>
     <div id="disqus_thread"></div>
@@ -37,5 +39,7 @@ export default {
 .post {
   margin-bottom: 50px;
   background: #555;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 </style>

@@ -8,7 +8,6 @@
           <div class="headline mt-3">{{ post.fields.title }}</div>
         </router-link>
         <p class="subheading mt-3">{{ post.fields.description }}</p>
-        <p class="subheading mt-3">{{ post.fields.body }}</p>
       </v-flex>
     </v-layout>
   </v-container>
