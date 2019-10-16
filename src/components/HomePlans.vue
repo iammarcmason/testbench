@@ -35,19 +35,19 @@ const query = {
   skip: 0,
   limit: 3,
   order: "-sys.createdAt",
+  content_type: "blogPost",
   include: 3
 };
 
 export default {
   name: "HomePlans",
   data() {
-    return { posts: [], includes: [] };
+    return { posts: [] };
   },
   mounted() {
     return this.$contentful
       .getEntries(query)
-      .then(res => (this.posts = res.items))
-      .then(res => (this.assets = res.includes));
+      .then(res => (this.posts = res.items));
   }
 };
 </script>

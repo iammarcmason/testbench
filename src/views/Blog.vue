@@ -7,7 +7,7 @@
         <router-link :to="{ name: 'post', params: {postID: post.sys.id } }">
           <div class="headline mt-3">{{ post.fields.title }}</div>
         </router-link>
-        <p class="subheading mt-3">{{ post.fields.description }}{{fields.file.contentType}}</p>
+        <p class="subheading mt-3">{{ post.fields.description }}</p>
         <p class="subheading mt-3">{{ post.fields.body }}</p>
       </v-flex>
     </v-layout>
@@ -17,8 +17,9 @@
 const query = {
   skip: 0,
   limit: 10,
-  //content_type_id: "blogPost",
-  order: "-sys.createdAt"
+  content_type: "blogPost",
+  order: "-sys.createdAt",
+  include: 2
 };
 
 export default {
