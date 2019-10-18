@@ -7,6 +7,7 @@ import vuetify from './plugins/vuetify';
 import ContentfulVue from 'contentful-vue';
 import VueDisqus from 'vue-disqus';
 import VueAnalytics from 'vue-analytics';
+import store from './store'
 
 Vue.use(VueDisqus);
 
@@ -25,5 +26,6 @@ new Vue({
   router,
   vuetify,
   VueDisqus,
-  render: h => h(App),
+  store,
+  render: h => h(App)
 }).$mount('#app');

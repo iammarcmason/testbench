@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <appAlert />
     <app-navigation></app-navigation>
 
     <v-content>
+      <appAlert />
       <router-view />
     </v-content>
     <bottom-nav></bottom-nav>
