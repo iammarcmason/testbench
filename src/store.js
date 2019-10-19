@@ -9,6 +9,5 @@ export default new Vuex.Store({
   },
   getters: {},
   mutations: {},
-  plugins: {},
   actions: {},
 });

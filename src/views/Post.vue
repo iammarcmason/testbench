@@ -1,8 +1,7 @@
 <template>
   <v-container>
     <v-layout column>
-      <h1>Blog Page</h1>
-
+      <h1>Post Page</h1>
       <v-flex class="post">
         <div class="headline mt-3">{{ post.title }}</div>
         <p class="mt-3 body-2">{{ post.description }}</p>
