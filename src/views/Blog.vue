@@ -1,8 +1,7 @@
 <template>
   <v-container>
     <v-layout column>
-      <h1>Blog Page</h1>
-
+      <h1>Blog Page:</h1>
       <v-flex class="post" v-for="post in posts" v-bind:key="post.fields.slug">
         <router-link :to="{ name: 'post', params: {postID: post.sys.id } }">
           <div class="headline mt-3">{{ post.fields.title }}</div>
@@ -24,9 +23,28 @@ const query = {
 export default {
   name: "blog",
   data() {
-    return { posts: [] };
+    return { posts: [], scrolledToBottom: false };
+  },
+  methods: {
+    scroll() {
+      window.onscroll = () => {
+        let bottomOfWindow =
+          Math.max(
+            window.pageYOffset,
+            document.documentElement.scrollTop,
+            document.body.scrollTop
+          ) +
+            window.innerHeight ===
+          document.documentElement.offsetHeight;
+
+        if (bottomOfWindow) {
+          this.scrolledToBottom = true; // replace it with your code
+        }
+      };
+    }
   },
   mounted() {
+    this.scroll();
     return this.$contentful
       .getEntries(query)
       .then(res => (this.posts = res.items));

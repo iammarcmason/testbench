@@ -36,5 +36,11 @@ export default new Router({
       component: () => import('./views/Post.vue'),
       meta: { transitionName: 'slide' },
     },
+    {
+      path: '/project/:projectID',
+      name: 'project',
+      component: () => import('./views/Project.vue'),
+      meta: { transitionName: 'slide' },
+    },
   ],
 });
