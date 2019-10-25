@@ -77,9 +77,11 @@ export default {
       {
         icon: "mdi-folder",
         iconClass: "grey lighten-1 white--text",
-        title: "Recipes",
+        title: "Python tests",
+        sluglink: "project/python-test",
         date: "Jan 17, 2014",
-        subtitle: "Jan 17, 2014"
+        subtitle:
+          "<span class='text--primary'>2015-2019</span> &mdash; An analysis of various  statistics from data found online using python"
       },
       {
         icon: "mdi-folder",

@@ -1,8 +1,10 @@
 <template>
   <v-container>
-    <v-layout column>
-      <h1>Project Page</h1>
-      <component v-bind:is="componentFile"></component>
+    <v-layout>
+      <div class="project">
+        <h1>Project Page</h1>
+        <component v-bind:is="componentFile"></component>
+      </div>
     </v-layout>
   </v-container>
 </template>
@@ -32,5 +34,9 @@ export default {
   background: #555;
   padding-left: 20px;
   padding-right: 20px;
+}
+.project {
+  width: 100%;
+  height: 1em;
 }
 </style>

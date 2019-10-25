@@ -34,11 +34,22 @@ export default {
 };
 </script>
 
- <style scoped>
+ <style>
 .post {
   margin-bottom: 50px;
   background: #555;
   padding-left: 20px;
   padding-right: 20px;
+}
+code {
+  background-color: #111 !important;
+}
+.headr {
+  margin-top: -20px;
+  text-align: right;
+  font-size: large;
+}
+.headr hr {
+  border: 1px solid #323;
 }
 </style>
