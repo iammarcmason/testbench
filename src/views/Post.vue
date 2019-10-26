@@ -43,7 +43,9 @@ export default {
 }
 code {
   background-color: #222 !important;
+  color: darkgoldenrod !important;
   padding: 10px;
+  font-weight: 100 !important;
 }
 code .headr {
   text-align: right;
@@ -51,5 +53,23 @@ code .headr {
 }
 code hr {
   border: 1px solid #444;
+}
+code .pnk {
+  color: hotpink !important;
+}
+code .lblu {
+  color: lightblue !important;
+}
+code .dblu {
+  color: rgb(43, 92, 253) !important;
+}
+code .ylo {
+  color: yellow !important;
+}
+code .org {
+  color: orange !important;
+}
+code .grn {
+  color: #63c597 !important;
 }
 </style>
